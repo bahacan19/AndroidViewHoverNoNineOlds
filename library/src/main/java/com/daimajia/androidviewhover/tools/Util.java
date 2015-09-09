@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.view.View;
 
-import com.nineoldandroids.view.ViewHelper;
+
 
 public class Util {
 
@@ -18,16 +18,16 @@ public class Util {
     }
 
     public static void reset(View target) {
-        ViewHelper.setAlpha(target, 1);
-        ViewHelper.setScaleX(target, 1);
-        ViewHelper.setScaleY(target, 1);
-        ViewHelper.setTranslationX(target, 0);
-        ViewHelper.setTranslationY(target, 0);
-        ViewHelper.setRotation(target, 0);
-        ViewHelper.setRotationY(target, 0);
-        ViewHelper.setRotationX(target, 0);
-        ViewHelper.setPivotX(target, target.getMeasuredWidth() / 2.0f);
-        ViewHelper.setPivotY(target, target.getMeasuredHeight() / 2.0f);
+        target.setAlpha(1);
+        target.setScaleX(1);
+        target.setScaleY(1);
+        target.setTranslationX(1);
+        target.setTranslationY(1);
+        target.setRotation(1);
+        target.setRotationY(1);
+        target.setRotationX(1);
+        target.setPivotX(target.getMeasuredWidth() / 2.0f);
+        target.setPivotY(target.getMeasuredWidth() / 2.0f);
     }
 
 }

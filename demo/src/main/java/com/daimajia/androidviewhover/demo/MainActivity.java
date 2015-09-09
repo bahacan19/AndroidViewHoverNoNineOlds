@@ -11,9 +11,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 import com.daimajia.androidviewhover.BlurLayout;
+import com.daimajia.androidviewhover.daijma.Techniques;
+import com.daimajia.androidviewhover.daijma.YoYo;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         mContext = this;
         setContentView(R.layout.activity_main);
-        BlurLayout.setGlobalDefaultDuration(450);
+        BlurLayout.setGlobalDefaultDuration(100);
         mSampleLayout = (BlurLayout)findViewById(R.id.blur_layout);
         View hover = LayoutInflater.from(mContext).inflate(R.layout.hover_sample, null);
         hover.findViewById(R.id.heart).setOnClickListener(new View.OnClickListener() {
@@ -70,7 +70,7 @@ public class MainActivity extends ActionBarActivity {
 
         mSampleLayout2.addChildAppearAnimator(hover2, R.id.description, Techniques.FadeInUp);
         mSampleLayout2.addChildDisappearAnimator(hover2, R.id.description, Techniques.FadeOutDown);
-        mSampleLayout2.addChildAppearAnimator(hover2, R.id.avatar, Techniques.DropOut, 1200);
+        mSampleLayout2.addChildAppearAnimator(hover2, R.id.avatar, Techniques.FadeInUp, 1200);
         mSampleLayout2.addChildDisappearAnimator(hover2, R.id.avatar, Techniques.FadeOutUp);
         mSampleLayout2.setBlurDuration(1000);
 
@@ -78,10 +78,10 @@ public class MainActivity extends ActionBarActivity {
         mSampleLayout3 = (BlurLayout)findViewById(R.id.blur_layout3);
         View hover3 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample3, null);
         mSampleLayout3.setHoverView(hover3);
-        mSampleLayout3.addChildAppearAnimator(hover3, R.id.eye, Techniques.Landing);
-        mSampleLayout3.addChildDisappearAnimator(hover3, R.id.eye, Techniques.TakingOff);
+        mSampleLayout3.addChildAppearAnimator(hover3, R.id.eye, Techniques.SlideInRight);
+        mSampleLayout3.addChildDisappearAnimator(hover3, R.id.eye, Techniques.SlideOutRight);
         mSampleLayout3.enableZoomBackground(true);
-        mSampleLayout3.setBlurDuration(1200);
+        mSampleLayout3.setBlurDuration(100);
 
         //sample 4
 

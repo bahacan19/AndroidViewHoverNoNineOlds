@@ -1,10 +1,6 @@
 package com.daimajia.androidviewhover.tools;
-import android.graphics.Bitmap;
 import android.content.Context;
-import android.support.v8.renderscript.Allocation;
-import android.support.v8.renderscript.Element;
-import android.support.v8.renderscript.RenderScript;
-import android.support.v8.renderscript.ScriptIntrinsicBlur;
+import android.graphics.Bitmap;
 
 
 public class Blur {
@@ -16,7 +12,7 @@ public class Blur {
     }
 
     public static Bitmap apply(Context context, Bitmap sentBitmap, int radius) {
-        final Bitmap bitmap = sentBitmap.copy(sentBitmap.getConfig(), true);
+        /*final Bitmap bitmap = sentBitmap.copy(sentBitmap.getConfig(), true);
         final RenderScript rs = RenderScript.create(context);
         final Allocation input = Allocation.createFromBitmap(rs, sentBitmap, Allocation.MipmapControl.MIPMAP_NONE, Allocation.USAGE_SCRIPT);
         final Allocation output = Allocation.createTyped(rs, input.getType());
@@ -31,8 +27,8 @@ public class Blur {
         rs.destroy();
         input.destroy();
         output.destroy();
-        script.destroy();
+        script.destroy();*/
 
-        return bitmap;
+        return sentBitmap;
     }
 }

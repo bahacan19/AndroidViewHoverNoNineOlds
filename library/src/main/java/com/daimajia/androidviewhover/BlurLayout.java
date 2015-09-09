@@ -1,5 +1,8 @@
 package com.daimajia.androidviewhover;
 
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Build;
@@ -13,14 +16,11 @@ import android.view.animation.Interpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
+import com.daimajia.androidviewhover.daijma.Techniques;
+import com.daimajia.androidviewhover.daijma.YoYo;
 import com.daimajia.androidviewhover.proxy.AnimationProxy;
 import com.daimajia.androidviewhover.tools.Blur;
 import com.daimajia.androidviewhover.tools.Util;
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.AnimatorSet;
-import com.nineoldandroids.animation.ObjectAnimator;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,11 +1,12 @@
 package com.daimajia.androidviewhover.proxy;
 
+import android.animation.Animator;
 import android.view.View;
 import android.view.animation.Interpolator;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
-import com.nineoldandroids.animation.Animator;
+import com.daimajia.androidviewhover.daijma.Techniques;
+import com.daimajia.androidviewhover.daijma.YoYo;
+
 
 public class AnimationProxy implements Runnable {
 
